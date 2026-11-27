@@ -1,0 +1,943 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Магнит · Смоленск — заказ онлайн, самовывоз и бонусы</title>
+<meta name="description" content="Закажите продукты в «Магните» в Смоленске, заберите по пути с работы и платите бонусами. Магазины рядом, акции недели, самовывоз.">
+<meta name="theme-color" content="#DA251D">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%9B%92%3C/text%3E%3C/svg%3E">
+
+<!-- Класс .js включает анимацию появления блоков: без JS весь контент виден сразу -->
+<script>document.documentElement.classList.add('js');</script>
+
+<!-- Open Graph: превью при отправке ссылки в мессенджерах и соцсетях -->
+<meta property="og:type" content="website">
+<meta property="og:locale" content="ru_RU">
+<meta property="og:site_name" content="Магнит · Смоленск">
+<meta property="og:title" content="Магнит · Смоленск — заказ онлайн, самовывоз и бонусы">
+<meta property="og:description" content="Всё нужное рядом: закажите онлайн, заберите по пути с работы и платите бонусами — без очередей.">
+<meta name="twitter:card" content="summary">
+
+<!-- Шрифты: Montserrat для заголовков, Inter для текста -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Montserrat:wght@600;700;800&display=swap" rel="stylesheet">
+
+<style>
+/* =========================================================
+   1. Переменные, базовая типографика и общие элементы
+   ========================================================= */
+:root{
+  --red:#DA251D;
+  --red-dark:#A81A14;
+  --red-soft:#FDE8E7;
+  --ink:#2B2B2B;
+  --muted:#545454;
+  --bg:#F5F5F5;
+  --white:#FFFFFF;
+  --line:#E6E6E6;
+  --radius:20px;
+  --shadow:0 10px 30px rgba(43,43,43,.08);
+  --font-head:"Montserrat","Segoe UI",Arial,sans-serif;
+  --font-body:"Inter","Segoe UI",Arial,sans-serif;
+}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:84px;-webkit-text-size-adjust:100%}
+body{
+  margin:0;
+  font-family:var(--font-body);
+  font-size:16px;
+  line-height:1.6;
+  color:var(--ink);
+  background:var(--white);
+}
+h1,h2,h3,h4{font-family:var(--font-head);line-height:1.2;margin:0 0 12px;letter-spacing:-.01em}
+h1{font-size:clamp(26px,6vw,46px);font-weight:800}
+h2{font-size:clamp(22px,4.2vw,34px);font-weight:700}
+h3{font-size:18px;font-weight:700}
+p{margin:0 0 12px}
+ul{margin:0;padding:0;list-style:none}
+a{color:var(--red-dark)}
+a:hover{color:var(--red)}
+svg{max-width:100%}
+:focus-visible{outline:3px solid var(--ink);outline-offset:3px;border-radius:8px}
+
+.container{width:100%;max-width:1140px;margin-inline:auto;padding-inline:16px}
+.section{padding:48px 0}
+.section--soft{background:var(--bg)}
+.section__head{max-width:720px;margin-bottom:24px}
+.lead{color:var(--muted);font-size:17px}
+.small{font-size:13px;color:var(--muted)}
+.visually-hidden{
+  position:absolute!important;width:1px;height:1px;padding:0;margin:-1px;
+  overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;border:0;
+}
+.skip-link{
+  position:absolute;left:8px;top:-70px;z-index:120;
+  background:var(--ink);color:#fff;text-decoration:none;
+  padding:10px 16px;border-radius:0 0 10px 10px;transition:top .2s;
+}
+.skip-link:focus{top:0;color:#fff}
+
+@media (min-width:768px){
+  .section{padding:72px 0}
+  .container{padding-inline:24px}
+  .section__head{margin-bottom:32px}
+}
+
+/* =========================================================
+   2. Кнопки
+   ========================================================= */
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;gap:8px;
+  min-height:52px;padding:14px 24px;border-radius:14px;
+  font-family:var(--font-head);font-size:16px;font-weight:700;line-height:1.2;
+  text-align:center;text-decoration:none;border:2px solid transparent;
+  cursor:pointer;transition:background-color .2s,color .2s,transform .2s,box-shadow .2s;
+}
+.btn:hover{transform:translateY(-1px)}
+.btn--primary{background:var(--red);color:#fff}
+.btn--primary:hover{background:var(--red-dark);color:#fff}
+.btn--ghost{background:#fff;color:var(--red-dark);border-color:var(--red)}
+.btn--ghost:hover{background:var(--red-soft);color:var(--red-dark)}
+.btn--sm{min-height:44px;padding:10px 18px;font-size:14px}
+.btn--wide{width:100%}
+
+/* =========================================================
+   3. Шапка и навигация (на мобильном — бургер)
+   ========================================================= */
+.site-header{
+  position:sticky;top:0;z-index:50;
+  background:#fff;
+  border-bottom:1px solid var(--line);
+}
+.header__inner{display:flex;align-items:center;justify-content:space-between;gap:12px;min-height:64px}
+.logo{
+  font-family:var(--font-head);font-weight:800;font-size:17px;
+  color:var(--ink);text-decoration:none;white-space:nowrap;
+}
+.logo b{color:var(--red);font-weight:800}
+.logo:hover{color:var(--ink)}
+
+.burger{
+  display:inline-flex;flex-direction:column;justify-content:center;gap:5px;
+  width:44px;height:44px;padding:0 10px;
+  background:#fff;border:1px solid var(--line);border-radius:12px;cursor:pointer;
+}
+.burger span{display:block;height:2px;background:var(--ink);border-radius:2px;transition:transform .2s,opacity .2s}
+.nav-open .burger span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+.nav-open .burger span:nth-child(2){opacity:0}
+.nav-open .burger span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+
+.nav{display:none}
+.nav.is-open{
+  display:flex;flex-direction:column;align-items:stretch;gap:12px;
+  position:absolute;left:0;right:0;top:100%;
+  padding:12px 16px 20px;background:#fff;
+  border-bottom:1px solid var(--line);box-shadow:0 14px 24px rgba(43,43,43,.08);
+}
+.nav__list{display:flex;flex-direction:column;gap:2px}
+.nav__list a{
+  display:block;padding:12px 6px;border-radius:10px;
+  color:var(--ink);text-decoration:none;font-size:15px;font-weight:500;
+}
+.nav__list a:hover{background:var(--red-soft);color:var(--red-dark)}
+
+@media (min-width:1000px){
+  .burger{display:none}
+  .nav{display:flex;align-items:center;gap:24px;position:static;padding:0;box-shadow:none;border:0;background:none}
+  .nav__list{flex-direction:row;gap:22px}
+  .nav__list a{padding:6px 0;position:relative}
+  .nav__list a::after{
+    content:"";position:absolute;left:0;bottom:0;height:2px;width:0;
+    background:var(--red);transition:width .2s;
+  }
+  .nav__list a:hover{background:none;color:var(--red-dark)}
+  .nav__list a:hover::after{width:100%}
+}
+
+/* =========================================================
+   4. Первый экран
+   ========================================================= */
+.hero{padding:32px 0 40px;background:linear-gradient(180deg,var(--white) 0%,var(--bg) 100%)}
+.hero__grid{display:grid;gap:24px;align-items:center}
+.hero__badge{
+  display:inline-flex;align-items:center;gap:8px;margin-bottom:14px;
+  padding:6px 14px;border-radius:999px;background:var(--red-soft);
+  color:var(--red-dark);font-size:13px;font-weight:600;
+}
+.hero h1{margin-bottom:14px}
+.hero h1 span{color:var(--red)}
+.hero__text{font-size:16px;color:var(--muted);max-width:52ch}
+.hero__actions{display:flex;flex-direction:column;gap:10px;margin:20px 0 14px}
+.hero__note{font-size:13px;color:var(--muted);margin:0}
+.hero__art{max-width:440px;margin:0 auto;width:100%}
+.hero__art svg{display:block;width:100%;height:auto}
+
+.trust{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:20px;padding-top:20px;border-top:1px solid var(--line)}
+.trust dt{font-size:12px;color:var(--muted);margin-bottom:2px}
+.trust dd{margin:0;font-family:var(--font-head);font-size:22px;font-weight:800;color:var(--red)}
+.trust small{display:block;font-family:var(--font-body);font-size:12px;font-weight:400;color:var(--muted);line-height:1.4}
+
+@media (min-width:640px){
+  .hero__actions{flex-direction:row;flex-wrap:wrap;align-items:center}
+}
+@media (min-width:900px){
+  .hero{padding:56px 0 64px}
+  .hero__grid{grid-template-columns:1.05fr .95fr;gap:40px}
+  .hero__text{font-size:17px}
+}
+
+/* =========================================================
+   5. Карточки: выгоды, шаги, акции, отзывы, магазины
+   ========================================================= */
+.cards{display:grid;gap:16px}
+.card{
+  background:#fff;border:1px solid var(--line);border-radius:var(--radius);
+  padding:22px;box-shadow:0 2px 10px rgba(43,43,43,.04);
+  transition:transform .2s,box-shadow .2s;
+}
+.card:hover{transform:translateY(-3px);box-shadow:var(--shadow)}
+.card p:last-child{margin-bottom:0}
+.card__icon{
+  display:inline-flex;align-items:center;justify-content:center;
+  width:48px;height:48px;margin-bottom:14px;
+  border-radius:14px;background:var(--red-soft);color:var(--red-dark);
+}
+.card__icon svg{width:26px;height:26px}
+
+@media (min-width:640px){ .cards--2{grid-template-columns:1fr 1fr} }
+@media (min-width:1024px){ .cards--4{grid-template-columns:repeat(4,1fr)} }
+
+/* Шаги «Как это работает» */
+.steps{counter-reset:step}
+.step{position:relative;background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:24px;transition:transform .2s,box-shadow .2s}
+.step:hover{transform:translateY(-3px);box-shadow:var(--shadow)}
+.step__num{
+  display:inline-flex;align-items:center;justify-content:center;
+  width:44px;height:44px;margin-bottom:14px;border-radius:50%;
+  background:var(--red);color:#fff;font-family:var(--font-head);font-weight:800;font-size:18px;
+}
+@media (min-width:768px){ .steps{grid-template-columns:repeat(3,1fr)} }
+
+/* Акции недели */
+.promo{
+  display:flex;flex-direction:column;gap:6px;
+  background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:22px;
+  transition:transform .2s,box-shadow .2s;
+}
+.promo:hover{transform:translateY(-3px);box-shadow:var(--shadow)}
+.promo__top{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-bottom:6px}
+.promo__value{font-family:var(--font-head);font-size:26px;font-weight:800;color:var(--red);line-height:1}
+.tag{
+  display:inline-block;padding:4px 10px;border-radius:999px;
+  background:var(--red-soft);color:var(--red-dark);font-size:12px;font-weight:600;
+}
+.tag--ad{background:#EDEDED;color:var(--ink)}
+.promo h3{font-size:17px;margin-bottom:2px}
+.promo p{margin:0;font-size:14px;color:var(--muted)}
+.promo__cond{margin-top:10px;padding-top:10px;border-top:1px dashed var(--line);font-size:12px;color:var(--muted)}
+@media (min-width:768px){ .promos{grid-template-columns:repeat(3,1fr)} }
+
+/* Отзывы */
+.review{display:flex;flex-direction:column;gap:10px;background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:22px}
+.review__stars{color:var(--red);font-size:16px;letter-spacing:2px;line-height:1}
+.review blockquote{margin:0;font-size:15px;color:var(--ink)}
+.review__author{display:flex;align-items:center;gap:10px;margin-top:auto;padding-top:12px;border-top:1px solid var(--line)}
+.avatar{
+  display:inline-flex;align-items:center;justify-content:center;
+  width:38px;height:38px;border-radius:50%;flex:0 0 auto;
+  background:var(--red-soft);color:var(--red-dark);
+  font-family:var(--font-head);font-weight:800;font-size:15px;
+}
+.review__name{font-size:14px;font-weight:600}
+.review__meta{font-size:12px;color:var(--muted)}
+@media (min-width:900px){ .reviews{grid-template-columns:repeat(3,1fr)} }
+
+/* Магазины */
+.store{display:flex;flex-direction:column;gap:4px;background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:22px}
+.store h3{font-size:17px;margin-bottom:4px}
+.store__meta{font-size:14px;color:var(--muted);margin:0 0 14px}
+.store .btn{margin-top:auto}
+@media (min-width:768px){ .stores{grid-template-columns:repeat(3,1fr)} }
+
+/* =========================================================
+   6. FAQ (раскрывающийся список на <details>)
+   ========================================================= */
+.faq{display:grid;gap:10px;max-width:820px}
+.faq__item{background:#fff;border:1px solid var(--line);border-radius:14px;overflow:hidden}
+.faq__item summary{
+  display:flex;align-items:center;justify-content:space-between;gap:14px;
+  padding:16px 18px;cursor:pointer;list-style:none;
+  font-family:var(--font-head);font-size:15px;font-weight:700;color:var(--ink);
+}
+.faq__item summary::-webkit-details-marker{display:none}
+.faq__item summary::after{
+  content:"+";flex:0 0 auto;width:24px;height:24px;
+  display:inline-flex;align-items:center;justify-content:center;
+  border-radius:50%;background:var(--red-soft);color:var(--red-dark);
+  font-size:18px;line-height:1;transition:transform .2s;
+}
+.faq__item[open] summary::after{transform:rotate(45deg)}
+.faq__item[open] summary{color:var(--red-dark)}
+.faq__body{padding:0 18px 16px;font-size:15px;color:var(--muted)}
+.faq__body p:last-child{margin-bottom:0}
+
+/* =========================================================
+   7. Финальный призыв и форма
+   ========================================================= */
+.cta-band{background:var(--ink);color:#fff}
+.cta-band__inner{display:flex;flex-direction:column;gap:16px;padding:32px 16px}
+.cta-band h2{color:#fff;margin-bottom:6px}
+.cta-band p{color:#E4E4E4;margin:0}
+.cta-band .btn{align-self:flex-start}
+@media (min-width:768px){
+  .cta-band__inner{flex-direction:row;align-items:center;justify-content:space-between;gap:24px;padding:40px 24px}
+}
+
+.download{background:var(--red-soft)}
+.download__card{
+  display:grid;gap:24px;background:#fff;border-radius:24px;padding:24px;
+  box-shadow:var(--shadow);
+}
+@media (min-width:900px){
+  .download__card{grid-template-columns:1fr 1fr;gap:40px;padding:40px}
+}
+/* Кнопки магазинов приложений */
+.stores-label{font-size:14px;color:var(--muted);margin:0 0 8px}
+.stores-links{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:6px}
+/* На узком экране кнопки магазинов встают в столбик на всю ширину */
+@media (max-width:479px){
+  .stores-links .btn{flex:1 1 100%}
+}
+
+.download h2{margin-bottom:10px}
+.download__text p{color:var(--muted)}
+.download__list{display:grid;gap:8px;margin:0 0 18px}
+.download__list li{position:relative;padding-left:26px;font-size:15px}
+.download__list li::before{
+  content:"✓";position:absolute;left:0;top:0;
+  color:var(--red-dark);font-weight:700;
+}
+
+.form{display:grid;gap:14px;align-content:start}
+.field{display:grid;gap:6px}
+.field label{font-size:14px;font-weight:600}
+.field input[type="text"],
+.field input[type="tel"]{
+  width:100%;min-height:50px;padding:12px 14px;
+  font-family:var(--font-body);font-size:16px;color:var(--ink);
+  background:#fff;border:1.5px solid #C9C9C9;border-radius:12px;
+  transition:border-color .2s,box-shadow .2s;
+}
+.field input::placeholder{color:#7A7A7A}
+.field input:hover{border-color:#9A9A9A}
+.field input:focus{border-color:var(--red);box-shadow:0 0 0 3px rgba(218,37,29,.16);outline:none}
+.field input:focus-visible{outline:3px solid var(--red);outline-offset:2px}
+
+.check{display:flex;gap:10px;align-items:flex-start;font-size:13px;color:var(--muted);line-height:1.5}
+.check input{width:20px;height:20px;margin:2px 0 0;accent-color:var(--red);flex:0 0 auto}
+.check a{color:var(--red-dark)}
+
+.form__success{
+  padding:18px;border-radius:14px;border:1.5px solid var(--red);
+  background:var(--red-soft);color:var(--ink);
+}
+.form__success strong{display:block;font-family:var(--font-head);font-size:18px;margin-bottom:4px}
+.form__success p{margin:0;font-size:14px;color:var(--muted)}
+
+/* =========================================================
+   8. Политика конфиденциальности и подвал
+   ========================================================= */
+.privacy-text{max-width:760px;font-size:14px;color:var(--muted)}
+.privacy-text h2{font-size:22px}
+.privacy-text h3{font-size:16px;margin-top:20px}
+
+.site-footer{background:var(--ink);color:#E4E4E4}
+.footer__inner{display:grid;gap:18px;padding:32px 16px}
+.footer__col p{margin:0 0 6px;font-size:14px}
+.footer__logo{font-family:var(--font-head);font-size:17px;font-weight:800;color:#fff;margin-bottom:8px}
+.footer__logo b{color:#FF6B62}
+.site-footer a{color:#fff;text-decoration:underline;text-underline-offset:3px}
+.site-footer a:hover{color:#FFB3AE}
+.footer__ad{
+  display:inline-block;padding:4px 10px;border-radius:999px;
+  border:1px solid #6B6B6B;font-size:12px;color:#fff;
+}
+.footer__bottom{
+  border-top:1px solid #4A4A4A;padding:14px 16px 24px;
+  display:flex;flex-wrap:wrap;gap:8px 18px;justify-content:space-between;
+  font-size:13px;color:#C9C9C9;
+}
+@media (min-width:768px){
+  .footer__inner{grid-template-columns:1.2fr 1fr 1fr;gap:32px;padding:48px 24px}
+  .footer__bottom{padding:16px 24px 28px}
+}
+
+/* =========================================================
+   9. Анимация появления блоков при прокрутке
+   (класс .js ставится в head, чтобы без JS контент был виден)
+   ========================================================= */
+.js .reveal{opacity:0;transform:translateY(18px);transition:opacity .6s ease,transform .6s ease}
+.js .reveal.is-visible{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  .js .reveal{opacity:1;transform:none;transition:none}
+  .btn:hover,.card:hover,.step:hover,.promo:hover{transform:none}
+}
+</style>
+</head>
+<body>
+<a class="skip-link" href="#main">Перейти к содержанию</a>
+
+<!-- ============ 1. ШАПКА ============ -->
+<header class="site-header">
+  <div class="container header__inner">
+    <a class="logo" href="#top"><b>Магнит</b> · Смоленск</a>
+
+    <nav class="nav" id="primary-nav" aria-label="Основная навигация">
+      <ul class="nav__list">
+        <li><a href="#benefits">Выгоды</a></li>
+        <li><a href="#how">Как это работает</a></li>
+        <li><a href="#promos">Акции</a></li>
+        <li><a href="#reviews">Отзывы</a></li>
+        <li><a href="#faq">Вопросы</a></li>
+        <li><a href="#stores">Магазины</a></li>
+      </ul>
+      <a class="btn btn--primary btn--sm" href="#download">Скачать приложение</a>
+    </nav>
+
+    <button class="burger" type="button" aria-label="Открыть меню" aria-expanded="false" aria-controls="primary-nav">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<main id="main">
+
+  <!-- ============ 2. ПЕРВЫЙ ЭКРАН ============ -->
+  <section class="hero" id="top" aria-labelledby="hero-title">
+    <div class="container hero__grid">
+      <div class="hero__content">
+        <h1 id="hero-title">Всё нужное рядом: закажите онлайн, заберите по пути с работы и платите <span>бонусами</span> — без очередей</h1>
+        <p class="hero__text">«Магнит» в Смоленске: продукты, акции недели и самовывоз в удобное время. Заказ собираем — вы забираете его по дороге домой.</p>
+
+        <div class="hero__actions">
+          <a class="btn btn--primary" href="#download">Скачать приложение и получить бонусы</a>
+          <a class="btn btn--ghost" href="#how">Как это работает</a>
+        </div>
+
+        <dl class="trust">
+          <div>
+            <dt>Рейтинг магазина</dt>
+            <dd>4,2 <small>на Яндекс Картах</small></dd>
+          </div>
+          <div>
+            <dt>Сообщество</dt>
+            <dd>1,8 млн <small>подписчиков ВКонтакте</small></dd>
+          </div>
+        </dl>
+      </div>
+
+      <!-- Иллюстрация: корзина, смартфон с приложением, бонусы -->
+      <div class="hero__art">
+        <svg viewBox="0 0 560 460" role="img" aria-labelledby="heroArtTitle heroArtDesc" xmlns="http://www.w3.org/2000/svg">
+          <title id="heroArtTitle">Корзина продуктов, смартфон с приложением и плашки с бонусами</title>
+          <desc id="heroArtDesc">Иллюстрация: смартфон с экраном приложения магазина, корзина покупок и бейджи «250 бонусов» и «−20% акция».</desc>
+
+          <ellipse cx="290" cy="235" rx="252" ry="208" fill="#FDE8E7"/>
+          <circle cx="486" cy="86" r="10" fill="#F3B7B3"/>
+          <circle cx="72" cy="150" r="6" fill="#F3B7B3"/>
+
+          <!-- Смартфон -->
+          <rect x="298" y="40" width="184" height="330" rx="34" fill="#2B2B2B"/>
+          <rect x="310" y="52" width="160" height="306" rx="24" fill="#FFFFFF"/>
+          <clipPath id="screenClip"><rect x="310" y="52" width="160" height="306" rx="24"/></clipPath>
+          <g clip-path="url(#screenClip)">
+            <rect x="310" y="52" width="160" height="72" fill="#DA251D"/>
+            <text x="330" y="92" font-family="Montserrat, Arial, sans-serif" font-size="15" font-weight="700" fill="#FFFFFF">Магнит</text>
+            <text x="330" y="110" font-family="Inter, Arial, sans-serif" font-size="11" fill="#FFD9D6">Смоленск</text>
+
+            <rect x="326" y="138" width="128" height="52" rx="12" fill="#FDE8E7"/>
+            <text x="340" y="158" font-family="Inter, Arial, sans-serif" font-size="10" fill="#A81A14">Бонусы</text>
+            <text x="340" y="180" font-family="Montserrat, Arial, sans-serif" font-size="20" font-weight="800" fill="#DA251D">250</text>
+
+            <rect x="326" y="202" width="128" height="10" rx="5" fill="#EBEBEB"/>
+            <rect x="326" y="220" width="92" height="10" rx="5" fill="#EBEBEB"/>
+
+            <rect x="326" y="244" width="60" height="60" rx="10" fill="#F5F5F5"/>
+            <rect x="394" y="244" width="60" height="60" rx="10" fill="#F5F5F5"/>
+            <circle cx="356" cy="268" r="13" fill="#F3B7B3"/>
+            <rect x="404" y="256" width="40" height="10" rx="4" fill="#DCDCDC"/>
+            <rect x="404" y="274" width="26" height="8" rx="4" fill="#DCDCDC"/>
+
+            <rect x="326" y="318" width="128" height="32" rx="16" fill="#DA251D"/>
+            <text x="390" y="339" text-anchor="middle" font-family="Montserrat, Arial, sans-serif" font-size="12" font-weight="700" fill="#FFFFFF">Заказать</text>
+          </g>
+
+          <!-- Продукты и корзина -->
+          <circle cx="104" cy="288" r="17" fill="#F3B7B3"/>
+          <rect x="126" y="262" width="28" height="42" rx="8" fill="#FFFFFF" stroke="#DA251D" stroke-width="4"/>
+          <circle cx="178" cy="290" r="15" fill="#FDE8E7" stroke="#DA251D" stroke-width="4"/>
+          <path d="M74 300 H206 L192 386 Q190 396 180 396 H100 Q90 396 88 386 Z" fill="#DA251D"/>
+          <path d="M106 300 a34 34 0 0 1 68 0" fill="none" stroke="#DA251D" stroke-width="10" stroke-linecap="round"/>
+
+          <!-- Плашка с бонусами -->
+          <rect x="30" y="94" width="172" height="56" rx="28" fill="#FFFFFF" stroke="#F3D9D7" stroke-width="2"/>
+          <circle cx="60" cy="122" r="14" fill="#DA251D"/>
+          <text x="60" y="127" text-anchor="middle" font-family="Montserrat, Arial, sans-serif" font-size="14" font-weight="800" fill="#FFFFFF">+</text>
+          <text x="82" y="128" font-family="Montserrat, Arial, sans-serif" font-size="14" font-weight="700" fill="#2B2B2B">250 бонусов</text>
+
+          <!-- Бейдж акции -->
+          <circle cx="500" cy="210" r="38" fill="#DA251D"/>
+          <text x="500" y="206" text-anchor="middle" font-family="Montserrat, Arial, sans-serif" font-size="16" font-weight="800" fill="#FFFFFF">−20%</text>
+          <text x="500" y="224" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="10" fill="#FFD9D6">акция</text>
+        </svg>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 3. ВЫГОДЫ ============ -->
+  <section class="section" id="benefits" aria-labelledby="benefits-title">
+    <div class="container">
+      <div class="section__head reveal">
+        <h2 id="benefits-title">Четыре причины зайти в приложение</h2>
+        <p class="lead">Коротко о том, что важно каждый день: близость, цена, скорость и удобная оплата.</p>
+      </div>
+
+      <div class="cards cards--2 cards--4">
+        <article class="card reveal">
+          <span class="card__icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-5.5-7-11a7 7 0 0 1 14 0c0 5.5-7 11-7 11Z"/><circle cx="12" cy="10" r="2.6"/></svg>
+          </span>
+          <h3>Магазин рядом</h3>
+          <p>Торговая точка в паре минут от дома или работы. Адреса в Смоленске — в блоке «Магазины».</p>
+        </article>
+
+        <article class="card reveal">
+          <span class="card__icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20.6 12.6 12 21.2l-8.6-8.6a5.2 5.2 0 0 1 7.4-7.4l1.2 1.2 1.2-1.2a5.2 5.2 0 0 1 7.4 7.4Z"/><path d="M9 12h6"/></svg>
+          </span>
+          <h3>Бонусы и скидки</h3>
+          <p>Копите бонусы за покупки и списывайте их при оплате. Правила начислений — в приложении.</p>
+        </article>
+
+        <article class="card reveal">
+          <span class="card__icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 7h16l-1.4 12.2a2 2 0 0 1-2 1.8H7.4a2 2 0 0 1-2-1.8Z"/><path d="M8.5 7V5.6a3.5 3.5 0 0 1 7 0V7"/></svg>
+          </span>
+          <h3>Самовывоз и доставка</h3>
+          <p>Соберите заказ в приложении и заберите в удобном магазине или оформите доставку на дом.</p>
+        </article>
+
+        <article class="card reveal">
+          <span class="card__icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="6" width="18" height="12" rx="3"/><path d="M3 10h18"/><path d="M7 15h4"/></svg>
+          </span>
+          <h3>Оплата в приложении или через СБП</h3>
+          <p>Платите картой в приложении или по QR-коду через СБП — без ожидания на кассе.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 4. КАК ЭТО РАБОТАЕТ ============ -->
+  <section class="section section--soft" id="how" aria-labelledby="how-title">
+    <div class="container">
+      <div class="section__head reveal">
+        <h2 id="how-title">Как это работает</h2>
+        <p class="lead">Три шага — и заказ ждёт вас в магазине.</p>
+      </div>
+
+      <div class="cards steps">
+        <article class="step reveal">
+          <span class="step__num" aria-hidden="true">1</span>
+          <h3>Установите приложение</h3>
+          <p>Скачайте «Магнит» по ссылке из письма или найдите его в магазине приложений.</p>
+        </article>
+        <article class="step reveal">
+          <span class="step__num" aria-hidden="true">2</span>
+          <h3>Выберите магазин</h3>
+          <p>Отметьте удобный адрес в Смоленске и время, когда зайдёте за заказом.</p>
+        </article>
+        <article class="step reveal">
+          <span class="step__num" aria-hidden="true">3</span>
+          <h3>Заберите заказ и спишите бонусы</h3>
+          <p>Оплатите онлайн, назовите номер заказа на кассе самовывоза и списывайте бонусы.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 5. АКЦИИ НЕДЕЛИ ============ -->
+  <section class="section" id="promos" aria-labelledby="promos-title">
+    <div class="container">
+      <div class="section__head reveal">
+        <h2 id="promos-title">Акции недели</h2>
+        <p class="lead">Скидки и бонусы этой недели — полные условия смотрите в приложении.</p>
+      </div>
+
+      <div class="cards promos">
+        <article class="promo reveal">
+          <div class="promo__top">
+            <span class="promo__value">−20%</span>
+            <span class="tag">Акция</span>
+          </div>
+          <h3>Молочные продукты</h3>
+          <p>Скидка по карте лояльности на йогурты, творог и молоко.</p>
+          <p class="promo__cond">Подробные условия — на кассе и в приложении.</p>
+        </article>
+
+        <article class="promo reveal">
+          <div class="promo__top">
+            <span class="promo__value">2 = 1</span>
+            <span class="tag">Акция</span>
+          </div>
+          <h3>Хлеб и выпечка</h3>
+          <p>Второй товар из подборки — по акции при покупке первого.</p>
+          <p class="promo__cond">Подробные условия — на кассе и в приложении.</p>
+        </article>
+
+        <article class="promo reveal">
+          <div class="promo__top">
+            <span class="promo__value">×2</span>
+            <span class="tag">Акция</span>
+          </div>
+          <h3>Фрукты и овощи</h3>
+          <p>Двойные бонусы на выбранные позиции из категории.</p>
+          <p class="promo__cond">Подробные условия — на кассе и в приложении.</p>
+        </article>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ============ 6. ОТЗЫВЫ ============ -->
+  <section class="section section--soft" id="reviews" aria-labelledby="reviews-title">
+    <div class="container">
+      <div class="section__head reveal">
+        <h2 id="reviews-title">Что говорят покупатели</h2>
+        <p class="lead">Отзывы покупателей магазинов в Смоленске — с Яндекс Карт.</p>
+      </div>
+
+      <div class="cards reviews">
+        <article class="review reveal">
+          <p class="review__stars" aria-hidden="true">★★★★★</p>
+          <blockquote>«Чисто, аккуратно, ценники на месте, с кассой самообслуживания если что всегда помогут».</blockquote>
+          <div class="review__author">
+            <span class="avatar" aria-hidden="true">А</span>
+            <div>
+              <div class="review__name">Амалия Тишакова</div>
+              <div class="review__meta">пр-т Гагарина, 1 · Яндекс Карты</div>
+            </div>
+          </div>
+        </article>
+
+        <article class="review reveal">
+          <p class="review__stars" aria-hidden="true">★★★★★</p>
+          <blockquote>«Хорошее расположение магазина, чистый, уютный, можно найти весь необходимый товар с хорошими скидками. Очередей на кассах нет, обслуживают быстро».</blockquote>
+          <div class="review__author">
+            <span class="avatar" aria-hidden="true">D</span>
+            <div>
+              <div class="review__name">Diamond Entertainment</div>
+              <div class="review__meta">ул. 8 Марта, 20Б · Яндекс Карты</div>
+            </div>
+          </div>
+        </article>
+
+        <article class="review reveal">
+          <p class="review__stars" aria-hidden="true">★★★★★</p>
+          <blockquote>«Отличные сотрудники, девчонки молодцы. Приятно тут находиться».</blockquote>
+          <div class="review__author">
+            <span class="avatar" aria-hidden="true">В</span>
+            <div>
+              <div class="review__name">Вероника Новикова</div>
+              <div class="review__meta">пр-т Гагарина, 10/2 · Яндекс Карты</div>
+            </div>
+          </div>
+        </article>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ============ 7. FAQ ============ -->
+  <section class="section" id="faq" aria-labelledby="faq-title">
+    <div class="container">
+      <div class="section__head reveal">
+        <h2 id="faq-title">Вопросы и ответы</h2>
+        <p class="lead">Коротко о бонусах, самовывозе, оплате и адресах.</p>
+      </div>
+
+      <div class="faq">
+        <details class="faq__item reveal">
+          <summary>Как получить бонусы?</summary>
+          <div class="faq__body">
+            <p>Установите приложение, войдите в аккаунт и покажите карту лояльности на кассе или привяжите её к заказу онлайн. Бонусы начисляются за покупки по правилам программы, а списать их можно при следующей оплате.</p>
+            <p>Точные условия начислений смотрите в приложении.</p>
+          </div>
+        </details>
+
+        <details class="faq__item reveal">
+          <summary>Как заказать самовывоз?</summary>
+          <div class="faq__body">
+            <p>Выберите товары в приложении, укажите магазин в Смоленске и удобное время. Когда заказ будет собран, придёт уведомление — останется назвать номер заказа на кассе самовывоза.</p>
+          </div>
+        </details>
+
+        <details class="faq__item reveal">
+          <summary>Как оплатить заказ?</summary>
+          <div class="faq__body">
+            <p>Оплатить можно картой в приложении или по QR-коду через СБП. Бонусы списываются при оплате, если они есть на счёте.</p>
+          </div>
+        </details>
+
+        <details class="faq__item reveal">
+          <summary>Где найти магазины в Смоленске?</summary>
+          <div class="faq__body">
+            <p>Адреса магазинов — в блоке «Магазины в Смоленске» ниже. Там же есть кнопка «Построить маршрут», которая открывает карту с адресом.</p>
+          </div>
+        </details>
+
+        <details class="faq__item reveal">
+          <summary>Как связаться с поддержкой?</summary>
+          <div class="faq__body">
+            <p>Позвоните на 8 (800) 200-90-02 или напишите на info@magnit.ru — контакты есть в подвале страницы.</p>
+          </div>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 8. МАГАЗИНЫ В СМОЛЕНСКЕ ============ -->
+  <section class="section section--soft" id="stores" aria-labelledby="stores-title">
+    <div class="container">
+      <div class="section__head reveal">
+        <h2 id="stores-title">Магазины в Смоленске</h2>
+        <p class="lead">Три магазина в Смоленске, где можно забрать заказ.</p>
+      </div>
+
+      <div class="cards stores">
+        <article class="store reveal">
+          <h3>Смоленск, пр-т Гагарина, 1</h3>
+          <p class="store__meta">4,3 на Яндекс Картах · до 21:00 · самовывоз</p>
+          <a class="btn btn--ghost btn--sm" href="https://yandex.ru/maps/org/magnit/1267872431/?ll=32.066017%2C54.777835&amp;mode=search&amp;sctx=ZAAAAAgBEAAaKAoSCZFGBU62H0tAEUCgM2lTC0xAEhIJ6ZjzjH3JwD8RJUG4Agr1pD8iBgABAgMEBSgKOABA%2FaYNSAFiPHJlbGV2X3Bpbl9zdWJ0aXRsZV9tdWx0aWNsYXNzPXBpbl9zdWJ0aXRsZV9tdWx0aWNsYXNzX2ZtbF92M2oCcnWdAc3MzD2gAQCoAQC9AROx%2FPrCAYgBr%2BXI3ATF35eOsAaYhK2dBOergYLPBc23yNUE7vyAu7kBq8yrjkeIjYnRBMrQl7GfA6jfp%2FOXAtfShunDAcq6nIMHzLaskpwCt%2BCutgTVoZnwBfDZ6OOxAoiy3%2B2bApKXwrkEx%2FO7wgTo2IetgAGp1JbYBM%2F2qZ4E9qyWpLMCl83bngT6nsC3BIICDNC80LDQs9C90LjRgooCAJICAJoCDGRlc2t0b3AtbWFwc6oCJDM1NDcxODY5MzI3LDE3NjQ4NDI3NjE5MiwzMzY3MDM0ODAwMrACAQ%3D%3D&amp;sll=32.055430%2C54.777835&amp;sspn=0.084160%2C0.027158&amp;text=%D0%BC%D0%B0%D0%B3%D0%BD%D0%B8%D1%82&amp;z=14.64" target="_blank" rel="noopener">Построить маршрут</a>
+        </article>
+
+        <article class="store reveal">
+          <h3>Смоленск, ул. 8 Марта, 20Б</h3>
+          <p class="store__meta">4,1 на Яндекс Картах · до 22:00 · самовывоз</p>
+          <a class="btn btn--ghost btn--sm" href="https://yandex.ru/maps/org/magnit/219073081285/?ll=32.066017%2C54.777835&amp;mode=search&amp;sctx=ZAAAAAgBEAAaKAoSCZFGBU62H0tAEUCgM2lTC0xAEhIJ6ZjzjH3JwD8RJUG4Agr1pD8iBgABAgMEBSgKOABA%2FaYNSAFiPHJlbGV2X3Bpbl9zdWJ0aXRsZV9tdWx0aWNsYXNzPXBpbl9zdWJ0aXRsZV9tdWx0aWNsYXNzX2ZtbF92M2oCcnWdAc3MzD2gAQCoAQC9AROx%2FPrCAYgBr%2BXI3ATF35eOsAaYhK2dBOergYLPBc23yNUE7vyAu7kBq8yrjkeIjYnRBMrQl7GfA6jfp%2FOXAtfShunDAcq6nIMHzLaskpwCt%2BCutgTVoZnwBfDZ6OOxAoiy3%2B2bApKXwrkEx%2FO7wgTo2IetgAGp1JbYBM%2F2qZ4E9qyWpLMCl83bngT6nsC3BIICDNC80LDQs9C90LjRgooCAJICAJoCDGRlc2t0b3AtbWFwc6oCJDM1NDcxODY5MzI3LDE3NjQ4NDI3NjE5MiwzMzY3MDM0ODAwMrACAQ%3D%3D&amp;sll=32.055430%2C54.777835&amp;sspn=0.084160%2C0.027158&amp;text=%D0%BC%D0%B0%D0%B3%D0%BD%D0%B8%D1%82&amp;z=14.64" target="_blank" rel="noopener">Построить маршрут</a>
+        </article>
+
+        <article class="store reveal">
+          <h3>Смоленск, пр-т Гагарина, 10/2</h3>
+          <p class="store__meta">4,3 на Яндекс Картах · до 21:30 · самовывоз</p>
+          <a class="btn btn--ghost btn--sm" href="https://yandex.ru/maps/org/magnit/193009309159/?ll=32.066017%2C54.777835&amp;mode=search&amp;sctx=ZAAAAAgBEAAaKAoSCZFGBU62H0tAEUCgM2lTC0xAEhIJ6ZjzjH3JwD8RJUG4Agr1pD8iBgABAgMEBSgKOABA%2FaYNSAFiPHJlbGV2X3Bpbl9zdWJ0aXRsZV9tdWx0aWNsYXNzPXBpbl9zdWJ0aXRsZV9tdWx0aWNsYXNzX2ZtbF92M2oCcnWdAc3MzD2gAQCoAQC9AROx%2FPrCAYgBr%2BXI3ATF35eOsAaYhK2dBOergYLPBc23yNUE7vyAu7kBq8yrjkeIjYnRBMrQl7GfA6jfp%2FOXAtfShunDAcq6nIMHzLaskpwCt%2BCutgTVoZnwBfDZ6OOxAoiy3%2B2bApKXwrkEx%2FO7wgTo2IetgAGp1JbYBM%2F2qZ4E9qyWpLMCl83bngT6nsC3BIICDNC80LDQs9C90LjRgooCAJICAJoCDGRlc2t0b3AtbWFwc6oCJDM1NDcxODY5MzI3LDE3NjQ4NDI3NjE5MiwzMzY3MDM0ODAwMrACAQ%3D%3D&amp;sll=32.055430%2C54.777835&amp;sspn=0.084160%2C0.027158&amp;text=%D0%BC%D0%B0%D0%B3%D0%BD%D0%B8%D1%82&amp;z=14.64" target="_blank" rel="noopener">Построить маршрут</a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 9. ПРОМЕЖУТОЧНЫЙ ПРИЗЫВ ============ -->
+  <section class="cta-band" aria-labelledby="cta-band-title">
+    <div class="container cta-band__inner">
+      <div>
+        <h2 id="cta-band-title">Заказ — за пару минут</h2>
+        <p>Соберите корзину дома и заберите продукты по дороге.</p>
+      </div>
+      <a class="btn btn--primary" href="#download">Скачать приложение</a>
+    </div>
+  </section>
+
+  <!-- ============ 10. ФИНАЛЬНЫЙ ПРИЗЫВ И ФОРМА ============ -->
+  <section class="section download" id="download" aria-labelledby="download-title">
+    <div class="container">
+      <div class="download__card">
+        <div class="download__text reveal">
+          <h2 id="download-title">Скачайте приложение — и получите бонусы</h2>
+          <p>Приложение «Магнит» бесплатно в Google Play, App Store и RuStore. Или оставьте телефон — пришлём ссылку.</p>
+
+          <ul class="download__list">
+            <li>Список покупок и самовывоз в одном месте</li>
+            <li>Цены и акции видны до похода в магазин</li>
+            <li>Оплата в приложении или через СБП</li>
+          </ul>
+
+          <!-- Ссылки на приложение в магазинах -->
+          <p class="stores-label">Выберите магазин приложений:</p>
+          <div class="stores-links">
+            <a class="btn btn--primary btn--sm" href="https://play.google.com/store/apps/details?id=ru.tander.magnit&amp;hl=ru" target="_blank" rel="noopener">Google Play</a>
+            <a class="btn btn--ghost btn--sm" href="https://apps.apple.com/ru/app/%D0%BC%D0%B0%D0%B3%D0%BD%D0%B8%D1%82-%D0%B0%D0%BA%D1%86%D0%B8%D0%B8-%D0%B8-%D0%B4%D0%BE%D1%81%D1%82%D0%B0%D0%B2%D0%BA%D0%B0/id881463973" target="_blank" rel="noopener">App Store</a>
+            <a class="btn btn--ghost btn--sm" href="https://www.rustore.ru/catalog/app/ru.tander.magnit" target="_blank" rel="noopener">RuStore</a>
+          </div>
+        </div>
+
+        <!-- Форма заявки на ссылку -->
+        <form class="form" id="lead-form" novalidate>
+          <h3 style="margin-bottom:2px">Оставьте телефон — пришлём ссылку на приложение</h3>
+
+          <div class="field">
+            <label for="name">Имя</label>
+            <input type="text" id="name" name="name" autocomplete="name" placeholder="Как к вам обращаться" required>
+          </div>
+
+          <div class="field">
+            <label for="phone">Телефон</label>
+            <input type="tel" id="phone" name="phone" inputmode="tel" autocomplete="tel" placeholder="+7 (___) ___-__-__" pattern="[0-9 +\x2D\u0028\u0029]{10,20}" required aria-describedby="phone-hint">
+            <span class="small" id="phone-hint">Например: +7 900 123-45-67</span>
+          </div>
+
+          <!-- Скрытые поля: UTM-метки подставляются из адреса страницы -->
+          <input type="hidden" name="utm_source" value="">
+          <input type="hidden" name="utm_medium" value="">
+          <input type="hidden" name="utm_campaign" value="">
+
+          <div class="check">
+            <input type="checkbox" id="consent" name="consent" required>
+            <label for="consent">Согласен на обработку персональных данных.</label>
+          </div>
+
+          <button class="btn btn--primary btn--wide" type="submit">Получить ссылку</button>
+
+          <div class="form__success" id="form-success" role="status" tabindex="-1" hidden>
+            <strong>Спасибо!</strong>
+            <p>Ссылка на приложение «Магнит» скоро придёт в СМС на указанный номер.</p>
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- ============ 12. ПОДВАЛ ============ -->
+<footer class="site-footer">
+  <div class="container footer__inner">
+    <div class="footer__col">
+      <p class="footer__logo"><b>Магнит</b> · Смоленск</p>
+      <p>Продукты, акции и самовывоз в магазинах Смоленска.</p>
+    </div>
+
+    <div class="footer__col">
+      <p><strong>Контакты</strong></p>
+      <p>Телефон: <a href="tel:+78002009002">8 (800) 200-90-02</a></p>
+      <p>Почта: <a href="mailto:info@magnit.ru">info@magnit.ru</a></p>
+    </div>
+
+    <div class="footer__col">
+      <p><strong>Приложение</strong></p>
+      <p><a href="#download">Скачать приложение</a></p>
+      <p><a href="#stores">Магазины в Смоленске</a></p>
+    </div>
+  </div>
+
+  <div class="container footer__bottom">
+    <span>© 2026 «Магнит · Смоленск»</span>
+    <span>27 ноября 2026 г.</span>
+  </div>
+</footer>
+
+<script>
+/* =========================================================
+   JS лендинга: меню, анимация появления, UTM, форма
+   ========================================================= */
+
+/* ---------- 1. Мобильное меню (бургер) ---------- */
+(function initMenu() {
+  const burger = document.querySelector('.burger');
+  const nav = document.getElementById('primary-nav');
+  if (!burger || !nav) return;
+
+  function setMenu(open) {
+    nav.classList.toggle('is-open', open);
+    document.body.classList.toggle('nav-open', open);
+    burger.setAttribute('aria-expanded', String(open));
+    burger.setAttribute('aria-label', open ? 'Закрыть меню' : 'Открыть меню');
+  }
+
+  burger.addEventListener('click', function () {
+    setMenu(!nav.classList.contains('is-open'));
+  });
+
+  /* Закрываем меню после перехода по якорю */
+  nav.addEventListener('click', function (event) {
+    if (event.target.closest('a')) setMenu(false);
+  });
+
+  /* Escape закрывает меню */
+  document.addEventListener('keydown', function (event) {
+    if (event.key === 'Escape' && nav.classList.contains('is-open')) {
+      setMenu(false);
+      burger.focus();
+    }
+  });
+
+  /* При переходе на десктопную ширину меню сбрасывается */
+  window.addEventListener('resize', function () {
+    if (window.innerWidth >= 1000) setMenu(false);
+  });
+})();
+
+/* ---------- 2. Плавное появление блоков при прокрутке ---------- */
+(function initReveal() {
+  const items = document.querySelectorAll('.reveal');
+  const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  if (!('IntersectionObserver' in window) || reduceMotion) {
+    items.forEach(function (item) { item.classList.add('is-visible'); });
+    return;
+  }
+
+  const observer = new IntersectionObserver(function (entries) {
+    entries.forEach(function (entry) {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('is-visible');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+
+  items.forEach(function (item) { observer.observe(item); });
+})();
+
+/* ---------- 3. UTM-метки из адреса страницы в скрытые поля ---------- */
+const UTM_FIELDS = ['utm_source', 'utm_medium', 'utm_campaign'];
+
+function fillUtmFields() {
+  const params = new URLSearchParams(window.location.search);
+  UTM_FIELDS.forEach(function (name) {
+    const field = document.querySelector('input[name="' + name + '"]');
+    if (field) field.value = (params.get(name) || '').slice(0, 200);
+  });
+}
+fillUtmFields();
+
+/* ---------- 4. Форма: проверка и показ подтверждения ---------- */
+(function initForm() {
+  const form = document.getElementById('lead-form');
+  if (!form) return;
+
+  const success = document.getElementById('form-success');
+
+  form.addEventListener('submit', function (event) {
+    event.preventDefault();
+
+    if (!form.checkValidity()) {
+      form.reportValidity();
+      return;
+    }
+
+    form.reset();
+    fillUtmFields(); /* после reset возвращаем UTM-метки в скрытые поля */
+
+    if (success) {
+      success.hidden = false;
+      success.focus();
+    }
+  });
+})();
+</script>
+</body>
+</html>
